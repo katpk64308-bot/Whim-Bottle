@@ -1,11 +1,98 @@
+/*
+ja que o uso de chat e proibido/ procura css, html ou js nesse link
+https://developer.mozilla.org/en-US/docs/Web
+*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
     text-decoration: none;
-
+    list-style: none;
 }
 
 body {
     overflow: hidden;
+    background: linear-gradient(45deg, #003344 0%, #0b1d29 30%, #0f0f0f 100%);
+    background-attachment: fixed;
+    color: #fff;
+    font-size: 16px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    padding: 20px 50px;
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+.logo {
+    font-size: 15px;
+}
+
+#conteudo {
+    text-align: center;
+}
+
+
+.imagem1 img {
+    max-width: 20%;
+    min-height: 15%;
+    filter: drop-shadow(-10px 5px 10px #018ab8)
+}
+
+.imagem1 {
+    text-align: left;
+    margin-top: 5%;
+
+}
+
+li:hover {
+    transform: scale(1.25);
+}
+
+header nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+}
+
+header nav ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #00f7ff;
+    transition: width 0.3s ease-in-out;
+}
+
+header nav ul li.active::after {
+    width: 100%;
+    background-color: #00ff95;
+}
+
+header nav ul li:hover::after {
+    width: 100%;
+}
+
+.text {
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUQjIg1_i6t8kCHKm459WxRxC7mw9c.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
