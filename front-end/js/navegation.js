@@ -1,13 +1,13 @@
 
 const paginas = {
-    //==================================
+    //===================================
     home: `
     <h1>home</h1>
       <div class="imagem1">
                 <img src="img/garrafa1.png" alt="Imagem da Whim Bottle">
             </div>
     `,
-    //==================================
+    //===================================
     sobre: `
     <h1>Sobre</h1>
      <div class="text">
