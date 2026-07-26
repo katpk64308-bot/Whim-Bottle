@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Teste temperatura</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .painel-status {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .seletor-temp {
+      font-size: 1rem;
+      padding: 8px 12px;
+      cursor: pointer;
+      width: 200px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Painel</h1>
+
+  <div class="painel-status">
+    Nível de agua atual: <span id="statusPorcentagem">0%</span>
+  </div>
+
+  <div>
+    <label for="selectTemp"><strong>Escolha a temperatura:</strong></label><br><br>
+    <select id="selectTemp" class="seletor-temp" onchange="alterarTemp(this.value)">
+      <option value="normal">🟢Verde</option>
+      <option value="quente">🔴Vermelho</option>
+      <option value="frio">🔵Azul</option>
+    </select>
+  </div>
+  <p id="porcen"></p>
+
+  <script type="module" src="js/confirebase.js"></script>
+  <script type="module" src="js/trocaml.js"></script>
+</body>
+
+</html>
