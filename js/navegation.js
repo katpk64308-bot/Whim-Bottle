@@ -1,4 +1,4 @@
-
+window.navegar = navegar
 const paginas = {
     //===================================
     home: `
@@ -6,6 +6,20 @@ const paginas = {
       <div class="imagem1">
                 <img src="img/garrafa1.png" alt="Imagem da Whim Bottle">
             </div>
+
+            <div class="painel-status">
+    Nível de agua atual: <span id="statusPorcentagem">0%</span>
+  </div>
+
+  <div class="simulador">
+    <label for="selectTemp"><strong>Escolha a temperatura:</strong></label><br><br>
+    <select id="selectTemp" class="seletor-temp" onchange="alterarTemp(this.value)">
+      <option value="normal">🟢Normal</option>
+      <option value="quente">🔴quente</option>
+      <option value="frio">🔵frio</option>
+    </select>
+    <p id="porcen"></p>
+  </div>
     `,
     //===================================
     sobre: `

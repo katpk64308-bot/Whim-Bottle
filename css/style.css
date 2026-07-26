@@ -12,7 +12,7 @@ https://developer.mozilla.org/en-US/docs/Web.
 }
 
 body {
-    overflow: hidden;
+
     background: linear-gradient(45deg, #003344 0%, #0b1d29 30%, #0f0f0f 100%);
     background-attachment: fixed;
     color: #fff;
@@ -85,6 +85,18 @@ header nav ul li:hover::after {
     width: 100%;
 }
 
+/*HOME*/
+.simulador {
+    position: relative;
+    top: -250px;
+}
+
+.painel-status {
+    position: relative;
+    top: -250px;
+}
+
+/*SOBRES*/
 .text {
     margin-top: 10%;
     margin-left: 25%;
