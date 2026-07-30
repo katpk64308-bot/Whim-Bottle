@@ -41,6 +41,15 @@ e ainda pode ser utilizada como carregador portátil para dispositivos móveis.<
 function navegar(aba) {
     document.getElementById('conteudo').innerHTML = paginas[aba];
 
+    if (aba === 'home') {
+        const temperaturaSalva = localStorage.getItem('temperaturaEscolhida');
+        const seletorTemperatura = document.getElementById('selectTemp');
+
+        if (temperaturaSalva && seletorTemperatura) {
+            seletorTemperatura.value = temperaturaSalva;
+        }
+    }
+
     document.querySelectorAll('header nav ul li').forEach(li => {
         li.classList.remove('active');
     });

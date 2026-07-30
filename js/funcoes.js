@@ -30,6 +30,8 @@ onValue(sinalBarra, (snapshot) => {
 });
 
 window.alterarTemp = async function (tempEscolhida) {
+    localStorage.setItem("temperaturaEscolhida", tempEscolhida);
+
     const refTemp = ref(db, "tempSelecao");
 
     await set(refTemp, {
