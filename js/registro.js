@@ -18,7 +18,7 @@ const pagina = {
     </form>
     `,
     //===================================
-    Login: `
+    login: `
   
       <div class="container">
         <h2>Login</h2> <br>
@@ -38,8 +38,8 @@ const pagina = {
     `,
 
 };
-function Registrar(aba) {
-    document.getElementById('conteudo').innerHTML = pagina[aba];
+function Registrar(ab) {
+    document.getElementById('conteudo').innerHTML = pagina[ab];
 
    
 
@@ -47,7 +47,7 @@ function Registrar(aba) {
         li.classList.remove('active');
     });
 
-    document.getElementById(`aba-${aba}`).classList.add('active');
+    document.getElementById(`ab-${ab}`).classList.add('active');
 }
 
 navegar('Registrar');
