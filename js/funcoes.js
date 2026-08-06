@@ -24,13 +24,16 @@ onValue(sinalBarra, (snapshot) => {
 
     if (dados && dados.porcentagem !== undefined) {
         porcentagem = dados.porcentagem;
-
         document.getElementById("statusPorcentagem").innerText = porcentagem + "%";
+        const ml = (porcentagem * 1000) / 100
+        document.getElementById("statsML").innerText = "ML: " + ml;
     }
 });
 
 window.alterarTemp = async function (tempEscolhida) {
-    const refTemp = ref(db, "tempSelecao");
+    localStorage.setItem("temperaturaEscolhida", tempEscolhida);
+
+
 
     await set(refTemp, {
         temp: tempEscolhida,

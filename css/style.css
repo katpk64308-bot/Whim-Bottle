@@ -1,7 +1,10 @@
 /*
-ja que o uso de chat e proibido/ procura css, html ou js nesse link
+procura css, html ou js nesse link
 https://developer.mozilla.org/en-US/docs/Web.
+
+MANTENHA O CSS ORGANIZADO COLOQUE COMENTARIO NÃO MUITO EXPECIFICO
 */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +15,7 @@ https://developer.mozilla.org/en-US/docs/Web.
 }
 
 body {
-
+    overflow: hidden;
     background: linear-gradient(45deg, #003344 0%, #0b1d29 30%, #0f0f0f 100%);
     background-attachment: fixed;
     color: #fff;
@@ -37,7 +40,6 @@ header {
     text-align: center;
 }
 
-
 .imagem1 img {
     max-width: 20%;
     min-height: 15%;
@@ -47,7 +49,6 @@ header {
 .imagem1 {
     text-align: left;
     margin-top: 5%;
-
 }
 
 li:hover {
@@ -85,10 +86,14 @@ header nav ul li:hover::after {
     width: 100%;
 }
 
-/*HOME*/
+/* HOME */
 .simulador {
     position: relative;
     top: -250px;
+}
+
+.painel-status span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 .painel-status {
@@ -96,15 +101,10 @@ header nav ul li:hover::after {
     top: -250px;
 }
 
-/*SOBRES*/
+/* SOBRES */
 .text {
     margin-top: 10%;
     margin-left: 25%;
     margin-right: 25%;
     font-family: 'Montserrat';
-    font-style: italic;
-    font-weight: 100 900;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUQjIg1_i6t8kCHKm459WxRxC7mw9c.woff2) format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
