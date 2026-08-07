@@ -1,14 +1,18 @@
 window.navegar = navegar
+window.sair = sair
 const paginas = {
-    //===================================
-    home: `
+  //===================================
+  home: `
     <h1>home</h1>
       <div class="imagem1">
                 <img src="img/garrafa1.png" alt="Imagem da Whim Bottle">
             </div>
 
             <div class="painel-status">
-    Nível de agua atual: <span id="statusPorcentagem">0%</span>
+    Nível de agua atual: 
+    <br>
+    <span id="statusPorcentagem">0%</span> /
+    <span id="statsML">0ML</span>
   </div>
 
   <div class="simulador">
@@ -18,11 +22,10 @@ const paginas = {
       <option value="quente">🔴quente</option>
       <option value="frio">🔵frio</option>
     </select>
-    <p id="porcen"></p>
   </div>
     `,
-    //===================================
-    sobre: `
+  //===================================
+  sobre: `
     <h1>Sobre</h1>
      <div class="text">
 <p>A Whim Bottle foi desenvolvida para tornar o dia a dia mais prático
@@ -33,14 +36,14 @@ na temperatura desejada. Ela também possui um suporte integrado para celulares,
 e ainda pode ser utilizada como carregador portátil para dispositivos móveis.</p>
         </div>
     `,
-    //==================================
-    contato: `
+  //==================================
+  contato: `
     <h1>Contato</h1>
     `
 };
-function navegar(aba) {
-    document.getElementById('conteudo').innerHTML = paginas[aba];
+//===================================
 
+<<<<<<< HEAD
     if (aba === 'home') {
         const temperaturaSalva = localStorage.getItem('temperaturaEscolhida');
         const seletorTemperatura = document.getElementById('selectTemp');
@@ -57,4 +60,31 @@ function navegar(aba) {
     document.getElementById(`aba-${aba}`).classList.add('active');
 }
 
+=======
+function sair(aba) {
+  if (aba === 'sair') {
+    window.location.href = 'index.html';
+  }
+}
+
+function navegar(aba) {
+  document.getElementById('conteudo').innerHTML = paginas[aba];
+
+  if (aba === 'home') {
+    const temperaturaSalva = localStorage.getItem('temperaturaEscolhida');
+    const seletorTemperatura = document.getElementById('selectTemp');
+
+    if (temperaturaSalva && seletorTemperatura) {
+      seletorTemperatura.value = temperaturaSalva;
+    }
+  }
+
+  document.querySelectorAll('header nav ul li').forEach(li => {
+    li.classList.remove('active');
+  });
+
+  document.getElementById(`aba-${aba}`).classList.add('active');
+}
+
+>>>>>>> d17b82499a1c2f58c2e78f11632a4222b477178e
 navegar('home');
