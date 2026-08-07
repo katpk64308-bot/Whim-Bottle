@@ -1,0 +1,27 @@
+{
+  "name": "progetos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --check server.js && node --check db.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katpk64308-bot/Whim-Bottle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/katpk64308-bot/Whim-Bottle/issues"
+  },
+  "homepage": "https://github.com/katpk64308-bot/Whim-Bottle#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mysql2": "^3.23.2"
+  }
+}
