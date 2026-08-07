@@ -12,7 +12,6 @@ resebe alterações
 set
 coloa um novo valor no banco
 */
-
 import { ref, onValue, set } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 import { db } from "./confirebase.js";
 

@@ -1,6 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getDatabase } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
+
 const firebaseConfig = {
     apiKey: "AIzaSyAfI5mcz1F8pdx1shmj5u_6eDA4xpa-06Q",
     authDomain: "simulador-led.firebaseapp.com",

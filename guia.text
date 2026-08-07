@@ -11,6 +11,5 @@ aba configurações {
 * Responsividade para celular(quando maior parte tiver pronta)
 
 - Gráficos mostrando os dados
-
 funções:
 mostra temperatira em °C (simulado 1°C 2s quente ate 60°C, frio ate 16°C, normal manter em tre 20 a 24 °C)

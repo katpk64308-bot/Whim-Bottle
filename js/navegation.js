@@ -36,7 +36,7 @@ na temperatura desejada. Ela também possui um suporte integrado para celulares,
 e ainda pode ser utilizada como carregador portátil para dispositivos móveis.</p>
         </div>
     `,
-  //==================================
+  //=================================
   contato: `
     <h1>Contato</h1>
     `
