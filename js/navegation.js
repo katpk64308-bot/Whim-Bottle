@@ -43,7 +43,6 @@ e ainda pode ser utilizada como carregador portátil para dispositivos móveis.<
 };
 //===================================
 
-<<<<<<< HEAD
     if (aba === 'home') {
         const temperaturaSalva = localStorage.getItem('temperaturaEscolhida');
         const seletorTemperatura = document.getElementById('selectTemp');
@@ -58,9 +57,7 @@ e ainda pode ser utilizada como carregador portátil para dispositivos móveis.<
     });
 
     document.getElementById(`aba-${aba}`).classList.add('active');
-}
 
-=======
 function sair(aba) {
   if (aba === 'sair') {
     window.location.href = 'index.html';
@@ -86,5 +83,4 @@ function navegar(aba) {
   document.getElementById(`aba-${aba}`).classList.add('active');
 }
 
->>>>>>> d17b82499a1c2f58c2e78f11632a4222b477178e
 navegar('home');

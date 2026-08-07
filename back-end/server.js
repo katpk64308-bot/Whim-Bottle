@@ -16,7 +16,6 @@ app.post('/tarefas', (req, res) => {
         INSERT INTO tarefas (titulo, descricao, status)
         VALUES (?, ?, ?)
     `;
-
     db.query(sql, [titulo, descricao, status], (erro) => {
 
         if (erro) {

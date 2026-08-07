@@ -21,7 +21,7 @@ const pagina = {
     `,
     //===================================
     login: `
-  
+
       <div class="container">
         <h2>Login</h2> <br>
         <form>
