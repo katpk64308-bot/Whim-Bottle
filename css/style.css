@@ -112,15 +112,15 @@ header nav ul li:hover::after {
 
 .container {
   border: 2px;
-  background: rgb(255, 255, 255);
+  backdrop-filter: blur(4px);
   border-radius: 30px;
   margin-left: 100px;
   margin-right: 560px;
   margin-top: 10%;
   padding: 57px;
-  color: #0c1cf7;
+  color: #ffffff;
   padding-top: px;
-  box-shadow: #00f7ff 1px 2px 21px;
+  box-shadow: #00f7ff 0px 0px 3px;
   text-align: center;
 }
 
@@ -128,11 +128,12 @@ input{
     padding: 14px;
     border: 2px;
     border-radius: 7px;
-    background-color: rgb(0, 238, 255);
+    background-color: rgb(53, 71, 109);
+    color: #fff;
 }
 
 input:hover {
-    background: #64faff;
+    background: #40609b;
 }
 
 button {
@@ -140,9 +141,11 @@ button {
     border: 1px;
     border-radius: 5px;
     background: #3cb1ff;
-    color:rgb(46, 10, 255);
+    color:rgb(255, 255, 255);
 }
 
-button :hover{
-    background: #7e8d92;
+button:hover{
+    background: #252157;
 }
+
+/*contato */

@@ -39,6 +39,10 @@ e ainda pode ser utilizada como carregador portátil para dispositivos móveis.<
   //=================================
   contato: `
     <h1>Contato</h1>
+    <div class="contato">
+    <p  class="text">Email da empresa: whimbottletec@gmail.com</p>
+    <p>Telefone: (47) 9999-1628</p>
+    </div>    
     `
 };
 //===================================
