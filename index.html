@@ -4,27 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>Cadastro/Login</title>
 
-     <link
+    <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
 </head>
-<style>
-    body{
-        background-image: url(img/fundo1.png);
-        background-size: cover;
-    }
-</style>
 <body>
-
     <header>
 
         <div class="logo">
-            <h1> Whim <br> Bottle</h1>
+            <img src="img/logo.png" alt="Whim Bottle">
         </div>
+        <div>
+            <nav>
+                <ul>
+                    <li type="button" onclick="Registrar('login')">Login</li>
+                    <li type="button" onclick="Registrar('Registrar')"> Registrar </li><br>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <div id="conteudo"></div>
     <script type="module" src="js/registro.js"></script>
 </body>

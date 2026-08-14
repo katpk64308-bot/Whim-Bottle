@@ -1,0 +1,142 @@
+/*
+procura css, html ou js nesse link
+https://developer.mozilla.org/en-US/docs/Web.
+
+MANTENHA O CSS ORGANIZADO COLOQUE COMENTARIO NÃƒO MUITO EXPECIFICO
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    overflow: hidden;
+    background-image: url(../img/fundo1.png);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    font-size: 16px;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    padding: 20px 50px;
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+.logo {
+    font-size: 18px;
+    margin-left: -30px;
+    margin-top: -15px;
+}
+
+.logo img {
+    width: 150px;
+    display: block;
+}
+
+#conteudo {
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+}
+
+li:hover {
+    transform: scale(1.15);
+}
+
+header nav ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #00f7ff;
+    transition: width 0.3s ease-in-out;
+}
+
+header nav ul li:hover::after {
+    width: 100%;
+}
+
+.container {
+    border: 2px solid #00f7ff;
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    padding: 0px;
+    color: #ffffff;
+    box-shadow: #00f7ff 0px 0px 3px;
+    width: 25%;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    text-align: center;
+}
+
+input {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 14px;
+    border: 1px;
+    border-radius: 7px;
+    background: #15306373;
+    box-shadow: #00a2ff75 0px 0px 2px;
+    color: #fff;
+    text-align: start;
+}
+
+input:hover {
+    background: #153063a1;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #00f7ff;
+    box-shadow: 0 0 10px #00f7ff;
+}
+
+label {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+button {
+    padding: 10px;
+    border: 1px;
+    border-radius: 5px;
+    background: #439cd8;
+    color: rgb(255, 255, 255);
+    padding-left: 33%;
+    padding-right: 33%;
+    box-shadow: 0 0 10px #00f7ff;
+}
+
+button:hover {
+    background: #10797c;
+}

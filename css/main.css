@@ -2,7 +2,7 @@
 procura css, html ou js nesse link
 https://developer.mozilla.org/en-US/docs/Web.
 
-MANTENHA O CSS ORGANIZADO COLOQUE COMENTARIO NÃO MUITO EXPECIFICO
+MANTENHA O CSS ORGANIZADO COLOQUE COMENTARIO NÃƒO MUITO EXPECIFICO
 */
 
 * {
@@ -34,15 +34,17 @@ header {
 
 .logo {
     font-size: 15px;
+    margin-left: -30px;
+    margin-top: -35px;
+}
+
+.logo img {
+    width: 150px;
+    display: block;
 }
 
 #conteudo {
     text-align: center;
-}
-.imagem1 img {
-    max-width: 20%;
-    min-height: 15%;
-    filter: drop-shadow(-10px 5px 10px #018ab8)
 }
 
 .imagem1 {
@@ -50,13 +52,19 @@ header {
     margin-top: 5%;
 }
 
+.imagem1 img {
+    max-width: 20%;
+    min-height: 15%;
+    filter: drop-shadow(-10px 5px 10px #018ab8);
+}
+
 li:hover {
-    transform: scale(1.25);
+    transform: scale(1.15);
 }
 
 header nav ul {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 header nav ul li {
@@ -86,13 +94,10 @@ header nav ul li:hover::after {
 }
 
 /* HOME */
+
 .simulador {
     position: relative;
     top: -250px;
-}
-
-.painel-status span {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 .painel-status {
@@ -100,52 +105,15 @@ header nav ul li:hover::after {
     top: -250px;
 }
 
-/* SOBRES */
+.painel-status span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* SOBRE */
+
 .text {
     margin-top: 10%;
     margin-left: 25%;
     margin-right: 25%;
     font-family: 'Montserrat';
 }
-
-/*CAIXA ATRÁS DOS CAMPOS DE CADASTRO*/
-
-.container {
-  border: 2px;
-  backdrop-filter: blur(4px);
-  border-radius: 30px;
-  margin-left: 100px;
-  margin-right: 560px;
-  margin-top: 10%;
-  padding: 57px;
-  color: #ffffff;
-  padding-top: px;
-  box-shadow: #00f7ff 0px 0px 3px;
-  text-align: center;
-}
-
-input{
-    padding: 14px;
-    border: 2px;
-    border-radius: 7px;
-    background-color: rgb(53, 71, 109);
-    color: #fff;
-}
-
-input:hover {
-    background: #40609b;
-}
-
-button {
-    padding: 10px;
-    border: 1px;
-    border-radius: 5px;
-    background: #3cb1ff;
-    color:rgb(255, 255, 255);
-}
-
-button:hover{
-    background: #252157;
-}
-
-/*contato */

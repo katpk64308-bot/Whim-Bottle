@@ -7,7 +7,6 @@ const paginas = {
       <div class="imagem1">
                 <img src="img/garrafa1.png" alt="Imagem da Whim Bottle">
             </div>
-
             <div class="painel-status">
     Nível de agua atual: 
     <br>
@@ -16,13 +15,18 @@ const paginas = {
   </div>
 
   <div class="simulador">
-    <label for="selectTemp"><strong>Escolha a temperatura:</strong></label><br><br>
-    <select id="selectTemp" class="seletor-temp" onchange="alterarTemp(this.value)">
-      <option value="normal">🟢Normal</option>
-      <option value="quente">🔴quente</option>
-      <option value="frio">🔵frio</option>
-    </select>
-  </div>
+    <strong>Escolha a temperatura:</strong><br><br>
+   
+    <span class="opcao-conteudo"><img src="img/natura.png" alt="">
+    <label><input type="radio" name="temperatura" value="normal" onchange="alterarTemp(this.value)"> Normal</label><br>
+   
+    <span class="opcao-conteudo"><img src="img/quent.png" alt="">
+    <label><input type="radio" name="temperatura" value="quente" onchange="alterarTemp(this.value)"> Quente</label><br>
+   
+    <span class="opcao-conteudo"><img src="img/fri.png" alt="">
+    <label><input type="radio" name="temperatura" value="frio" onchange="alterarTemp(this.value)"> Frio</label><br>
+ </div>
+   
     `,
   //===================================
   sobre: `
@@ -40,27 +44,11 @@ e ainda pode ser utilizada como carregador portátil para dispositivos móveis.<
   contato: `
     <h1>Contato</h1>
     <div class="contato">
-    <p  class="text">Email da empresa: whimbottletec@gmail.com</p>
+    <p  class="text">Email da empresa: <link>whimbottletec@gmail.com</link></p>
     <p>Telefone: (47) 9999-1628</p>
     </div>    
     `
 };
-//===================================
-
-    if (aba === 'home') {
-        const temperaturaSalva = localStorage.getItem('temperaturaEscolhida');
-        const seletorTemperatura = document.getElementById('selectTemp');
-
-        if (temperaturaSalva && seletorTemperatura) {
-            seletorTemperatura.value = temperaturaSalva;
-        }
-    }
-
-    document.querySelectorAll('header nav ul li').forEach(li => {
-        li.classList.remove('active');
-    });
-
-    document.getElementById(`aba-${aba}`).classList.add('active');
 
 function sair(aba) {
   if (aba === 'sair') {
@@ -73,17 +61,18 @@ function navegar(aba) {
 
   if (aba === 'home') {
     const temperaturaSalva = localStorage.getItem('temperaturaEscolhida');
-    const seletorTemperatura = document.getElementById('selectTemp');
+    const opcaoTemperatura = document.querySelector(
+      `input[name="temperatura"][value="${temperaturaSalva || 'normal'}"]`
+    );
 
-    if (temperaturaSalva && seletorTemperatura) {
-      seletorTemperatura.value = temperaturaSalva;
+    if (opcaoTemperatura) {
+      opcaoTemperatura.checked = true;
     }
   }
 
   document.querySelectorAll('header nav ul li').forEach(li => {
     li.classList.remove('active');
   });
-
   document.getElementById(`aba-${aba}`).classList.add('active');
 }
 

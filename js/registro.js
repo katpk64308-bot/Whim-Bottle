@@ -6,23 +6,19 @@ const pagina = {
 
       <form onsubmit="event.preventDefault();">
 
-        <label>Nome:</label><br>
-        <input type="text" id="nome" name="nome" required><br><br>
+        <label>Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required><br><br>
 
-        <label>Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <label>Email:</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu email" required><br><br>
 
-        <label>Senha:</label><br>
-        <input type="password" id="senha" name="senha" required><br><br>
+        <label>Senha:</label>
+        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required><br><br>
 
-        <label>Confirme sua senha:</label><br>
-        <input type="password" id="confirmaSenha" name="confirmaSenha" required><br><br>
+        <label>Confirme sua senha:</label>
+        <input type="password" id="confirmaSenha" name="confirmaSenha" placeholder="Confirme sua senha" required><br><br>
 
-        <button type="submit" class="button">Cadastrar</button><br><br><br>
-
-        <button type="button" onclick="Registrar('login')">
-          Login
-        </button>
+        <button type="submit" class="button">Criar</button><br><br><br>
 
       </form>
     </div>
@@ -34,18 +30,18 @@ const pagina = {
 
       <form onsubmit="event.preventDefault(); entraADM();">
 
-        <label>Nome:</label><br>
-        <input type="text" id="loginNome" name="loginNome" required><br><br>
+        <label>Nome:</label>
+        <input type="text" id="loginNome" name="loginNome" placeholder="Digite seu nome" required><br><br>
 
-        <label>Email:</label><br>
-        <input type="email" id="loginEmail" name="loginEmail" required><br><br>
+        <label>Email:</label>
+        <input type="email" id="loginEmail" name="loginEmail" placeholder="Digite seu email" required><br><br>
 
-        <label>Senha:</label><br>
-        <input type="password" id="loginSenha" name="loginSenha" required><br><br>
+        <label>Senha:</label>
+        <input type="password" id="loginSenha" name="loginSenha" placeholder="Digite sua senha" required><br><br>
+        
+        <li type="button" onclick="Registrar('REsenha')">esqueceu a senha</li><br><br><br>
+        <button type="submit" class="button">Entra</button><br><br><br><br>
 
-        <button type="submit" class="button">Login</button><br><br><br>
-
-        <button type="button" onclick="Registrar('Registrar')"> Registrar </button><br>
 
       </form>
     </div>
