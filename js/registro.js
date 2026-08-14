@@ -1,13 +1,11 @@
-window.Registrar = Registrar;
-window.entraADM = entraADM;
-
 const pagina = {
-  //===================================
+
   Registrar: `
     <div class="container">
       <h2>Cadastro</h2><br>
 
-      <form>
+      <form onsubmit="event.preventDefault();">
+
         <label>Nome:</label><br>
         <input type="text" id="nome" name="nome" required><br><br>
 
@@ -20,13 +18,16 @@ const pagina = {
         <label>Confirme sua senha:</label><br>
         <input type="password" id="confirmaSenha" name="confirmaSenha" required><br><br>
 
-        <button type="submit" class="button">Cadastrar</button><br><br><br><br><br>
-         <button onclick="Registrar('login')" id="aba-contato">Login</button>
+        <button type="submit" class="button">Cadastrar</button><br><br><br>
+
+        <button type="button" onclick="Registrar('login')">
+          Login
+        </button>
+
       </form>
     </div>
   `,
 
-  //===================================
   login: `
     <div class="container">
       <h2>Login</h2><br>
@@ -42,27 +43,22 @@ const pagina = {
         <label>Senha:</label><br>
         <input type="password" id="loginSenha" name="loginSenha" required><br><br>
 
-           
-        <button type="submit" class="button">Login</button><br><br><br><br><br>
- <button onclick="Registrar('Registrar')" id="aba-contato">Registrar</button>
+        <button type="submit" class="button">Login</button><br><br><br>
+
+        <button type="button" onclick="Registrar('Registrar')"> Registrar </button><br>
+
       </form>
     </div>
   `
 };
 
+
 function Registrar(aba) {
+
   document.getElementById('conteudo').innerHTML = pagina[aba];
 
-  document.querySelectorAll('li').forEach(li => {
-    li.classList.remove('active');
-  });
-
-  const abaAtual = document.getElementById(`aba-${aba}`);
-
-  if (abaAtual) {
-    abaAtual.classList.add('active');
-  }
 }
+
 
 function entraADM() {
 
@@ -86,5 +82,10 @@ function entraADM() {
 
   }
 }
+
+
+window.Registrar = Registrar;
+window.entraADM = entraADM;
+
 
 Registrar('Registrar');

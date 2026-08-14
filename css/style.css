@@ -107,3 +107,42 @@ header nav ul li:hover::after {
     margin-right: 25%;
     font-family: 'Montserrat';
 }
+
+/*CAIXA ATRÁS DOS CAMPOS DE CADASTRO*/
+
+.container {
+  border: 2px;
+  background: rgb(255, 255, 255);
+  border-radius: 30px;
+  margin-left: 100px;
+  margin-right: 560px;
+  margin-top: 10%;
+  padding: 57px;
+  color: #0c1cf7;
+  padding-top: px;
+  box-shadow: #00f7ff 1px 2px 21px;
+  text-align: center;
+}
+
+input{
+    padding: 14px;
+    border: 2px;
+    border-radius: 7px;
+    background-color: rgb(0, 238, 255);
+}
+
+input:hover {
+    background: #64faff;
+}
+
+button {
+    padding: 10px;
+    border: 1px;
+    border-radius: 5px;
+    background: #3cb1ff;
+    color:rgb(46, 10, 255);
+}
+
+button :hover{
+    background: #7e8d92;
+}
