@@ -16,7 +16,7 @@ import { ref, onValue, set } from "https://www.gstatic.com/firebasejs/10.12.2/fi
 import { db } from "./confirebase.js";
 
 const sinalBarra = ref(db, "controleBarra");
-
+export let porcentagem = 0;
 onValue(sinalBarra, (snapshot) => {
     const dados = snapshot.val();
 

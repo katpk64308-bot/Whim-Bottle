@@ -2,7 +2,7 @@
 procura css, html ou js nesse link
 https://developer.mozilla.org/en-US/docs/Web.
 
-MANTENHA O CSS ORGANIZADO COLOQUE COMENTARIO NÃƒO MUITO EXPECIFICO
+MANTENHA O CSS ORGANIZADO COLOQUE COMENTARIO NÃO MUITO EXPECIFICO
 */
 
 * {
@@ -16,7 +16,7 @@ MANTENHA O CSS ORGANIZADO COLOQUE COMENTARIO NÃƒO MUITO EXPECIFICO
 
 body {
     overflow: hidden;
-    background: linear-gradient(45deg, #003344 0%, #0b1d29 30%, #0f0f0f 100%);
+    background-image: url(../img/fundo1.png);
     background-attachment: fixed;
     color: #fff;
     font-size: 16px;
@@ -43,8 +43,13 @@ header {
     display: block;
 }
 
+h1 {
+    text-align: center;
+}
+
 #conteudo {
     text-align: center;
+    margin-right: 40px;
 }
 
 .imagem1 {
@@ -97,16 +102,94 @@ header nav ul li:hover::after {
 
 .simulador {
     position: relative;
-    top: -250px;
+    top: -550px;
+    text-align: end;
+    
 }
 
 .painel-status {
     position: relative;
     top: -250px;
+    text-align: center;
 }
 
 .painel-status span {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.temp-atual {
+    margin-top: 20px;
+}
+
+.opcao-conteudo img {
+    vertical-align: middle;
+}
+
+.escolha-temperatura {
+    display: inline-block;
+    min-width: 300px;
+    padding: 22px;
+    border: 1px solid rgba(0, 229, 245, 0.5);
+    border-radius: 12px;
+    background: rgba(1, 17, 27, 0.8);
+    text-align: left;
+    box-shadow: 0 0 14px rgba(0, 229, 245, 0.12);
+}
+
+.escolha-temperatura strong {
+    display: block;
+    color: #08e5f5;
+    margin-bottom: 16px;
+}
+
+.temperaturaopcao {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 9px 0;
+    padding: 10px 14px;
+    border: 1px solid;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.temperaturaopcao input {
+    accent-color: #08e5f5;
+    appearance: none;
+}
+
+.temperaturaopcao img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+/* Quente */
+.temperaturaopcao.quente {
+    border-color: #ff403b;
+}
+
+.temperaturaopcao.quente:has(input[type="radio"]:checked) {
+    box-shadow: 0 0 12px rgba(255, 64, 59, 0.5);
+    background: rgba(255, 64, 59, 0.103);
+}
+
+/* Frio */
+.temperaturaopcao.frio {
+    border-color: #008bca;
+}
+
+.temperaturaopcao.frio:has(input[type="radio"]:checked) {
+    box-shadow: 0 0 12px rgba(0, 139, 202, 0.5);
+    background: rgba(0, 139, 202, 0.103);
+}
+
+/* Normal */
+.temperaturaopcao.normal {
+    border-color: #42a843;
+}
+
+.temperaturaopcao.normal:has(input[type="radio"]:checked) {
+    box-shadow: 0 0 12px rgba(66, 168, 67, 0.5);
+    background:rgba(66, 168, 68, 0.103);
 }
 
 /* SOBRE */
@@ -117,3 +200,4 @@ header nav ul li:hover::after {
     margin-right: 25%;
     font-family: 'Montserrat';
 }
+/*contato*/
