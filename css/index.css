@@ -15,13 +15,14 @@ MANTENHA O CSS ORGANIZADO COLOQUE COMENTARIO NÃƒO MUITO EXPECIFICO
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     background-image: url(../img/fundo1.png);
     background-size: cover;
     background-attachment: fixed;
     color: #fff;
     font-size: 16px;
-    min-height: 100vh;
+    min-height: 100%;
     margin: 0;
 }
 
@@ -29,7 +30,7 @@ header {
     position: fixed;
     top: 0;
     padding: 20px 50px;
-    width: 90vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     z-index: 3;
@@ -50,6 +51,7 @@ header {
     text-align: center;
     position: relative;
     padding-top: 100px;
+    padding-bottom: 20px;
 }
 
 header nav ul {
@@ -142,4 +144,22 @@ button {
 
 button:hover {
     background: #10797c;
+}
+
+/*
+MIDIA
+*/
+
+@media (max-height: 750px) {
+    #conteudo {
+        padding-top: 85px;
+    }
+
+    .container {
+        padding-top: 5px;
+    }
+
+    input {
+        padding: 10px;
+    }
 }
