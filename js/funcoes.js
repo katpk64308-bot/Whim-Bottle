@@ -16,26 +16,83 @@ import { ref, onValue, set } from "https://www.gstatic.com/firebasejs/10.12.2/fi
 import { db } from "./confirebase.js";
 
 const sinalBarra = ref(db, "controleBarra");
+
 export let porcentagem = 0;
+
 onValue(sinalBarra, (snapshot) => {
+
     const dados = snapshot.val();
 
     if (dados && dados.porcentagem !== undefined) {
+
         porcentagem = dados.porcentagem;
-        document.getElementById("statusPorcentagem").innerText = porcentagem + "%";
-        const ml = (porcentagem * 1000) / 100
-        document.getElementById("statsML").innerText = "ML: " + ml;
+
+        document.getElementById("statusPorcentagem").innerText =
+            porcentagem + "%";
+
+        const ml = (porcentagem * 1000) / 100;
+
+        document.getElementById("statsML").innerText =
+            "ML: " + ml;
     }
 });
 
-window.alterarTemp = async function (tempEscolhida) {
+
+// ==============================
+
+const refTemp = ref(db, "tempSelecao");
+
+onValue(refTemp, (snapshot) => {
+
+    const dadosTemp = snapshot.val();
+
+    if (!dadosTemp || !dadosTemp.temp) {
+        return;
+    }
+
+    const valor = dadosTemp.temp;
+
+    let i = 1;
+    let limite;
+
+    if (valor === "frio") {
+        limite = 10;
+    }
+
+    if (valor === "normal") {
+        limite = 22;
+    }
+
+    if (valor === "quente") {
+        limite = 40;
+    }
+
+    if (limite === undefined) {
+        return;
+    }
+
+    const intervalo = setInterval(() => {
+
+        document.getElementById("temp").textContent = i + "°C";
+
+        i++;
+
+        if (i > limite) {
+            clearInterval(intervalo);
+        }
+
+    }, 300);
+
+});
+
+
+window.alterarTemp = async function(tempEscolhida) {
+
     localStorage.setItem("temperaturaEscolhida", tempEscolhida);
-
-
-    const refTemp = ref(db, "tempSelecao");
 
     await set(refTemp, {
         temp: tempEscolhida,
         horario: Date.now()
     });
+
 };

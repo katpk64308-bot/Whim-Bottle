@@ -19,7 +19,7 @@ const paginas = {
                 <span class="opcao-conteudo">
                     <img src="img/imgtemp1.png" width="50">
                 </span>
-                <span class="statsTemp">0°C</span>
+                <span class="statsTemp" id="temp">0°C</span>
             </div>
         </div>
 
@@ -28,19 +28,19 @@ const paginas = {
                 <strong>Escolha a temperatura:</strong>
 
                 <label class="temperaturaopcao normal">
-                    <input type="radio" name="temperatura" value="normal" onchange="alterarTemp(this.value)">
+                    <input type="radio" name="temperatura" id="2" value="normal" onchange="alterarTemp(this.value)">
                     <img src="img/natural.png" alt="">
                     Normal
                 </label>
 
                 <label class="temperaturaopcao quente">
-                    <input type="radio" name="temperatura" value="quente" onchange="alterarTemp(this.value)">
+                    <input type="radio" name="temperatura" id="3" value="quente" onchange="alterarTemp(this.value)">
                     <img src="img/quente.png" alt="">
                     Quente
                 </label>
 
                 <label class="temperaturaopcao frio">
-                    <input type="radio" name="temperatura" value="frio" onchange="alterarTemp(this.value)">
+                    <input type="radio" name="temperatura" id="1" value="frio" onchange="alterarTemp(this.value)">
                     <img src="img/frio.png" alt="">
                     Fria
                 </label>
