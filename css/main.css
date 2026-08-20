@@ -4,6 +4,14 @@ https://developer.mozilla.org/en-US/docs/Web.
 
 MANTENHA O CSS ORGANIZADO COLOQUE COMENTARIO NÃO MUITO EXPECIFICO
 */
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 * {
     margin: 0;
@@ -17,7 +25,7 @@ MANTENHA O CSS ORGANIZADO COLOQUE COMENTARIO NÃO MUITO EXPECIFICO
 body {
     overflow: hidden;
     background-image: url(../img/fundo2.png);
-     background-size: cover;
+    background-size: cover;
     background-attachment: fixed;
     background-attachment: fixed;
     color: #fff;
@@ -106,7 +114,7 @@ header nav ul li:hover::after {
     position: relative;
     top: -550px;
     text-align: end;
-    
+
 }
 
 .painel-status {
@@ -154,6 +162,7 @@ header nav ul li:hover::after {
     border-radius: 8px;
     cursor: pointer;
 }
+
 .temperaturaopcao input {
     accent-color: #08e5f5;
     appearance: none;
@@ -164,6 +173,7 @@ header nav ul li:hover::after {
     height: 30px;
     object-fit: contain;
 }
+
 /* Quente */
 .temperaturaopcao.quente {
     border-color: #ff403b;
@@ -191,7 +201,7 @@ header nav ul li:hover::after {
 
 .temperaturaopcao.normal:has(input[type="radio"]:checked) {
     box-shadow: 0 0 12px rgba(66, 168, 67, 0.5);
-    background:rgba(66, 168, 68, 0.103);
+    background: rgba(66, 168, 68, 0.103);
 }
 
 /* SOBRE */
@@ -202,4 +212,5 @@ header nav ul li:hover::after {
     margin-right: 25%;
     font-family: 'Montserrat';
 }
+
 /*contato*/

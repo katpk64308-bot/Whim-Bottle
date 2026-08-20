@@ -17,7 +17,7 @@ const paginas = {
             <div class="temp-atual">
                 <p>Temperatura</p>
                 <span class="opcao-conteudo">
-                    <img src="img/imgtemp1.png" width="50">
+                    <img src="img/imgtemp1.png" id="imagemTemperatura" width="50">
                 </span>
                 <span class="statsTemp" id="temp">0°C</span>
             </div>

@@ -4,6 +4,14 @@ https://developer.mozilla.org/en-US/docs/Web.
 
 MANTENHA O CSS ORGANIZADO COLOQUE COMENTARIO NÃƒO MUITO EXPECIFICO
 */
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 * {
     margin: 0;

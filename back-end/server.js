@@ -24,23 +24,66 @@ app.get('/', function (req, res) {
 app.get('/index.html', function (req, res) {
     res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
+//==================================================
+app.post("/login", (req, res) => {
+
+    const { nome, email, senha } = req.body;
+
+    const sql = "SELECT * FROM usuarios WHERE nome = ? AND email = ? AND senha = ?";
+
+    connection.query(sql, [nome, email, senha], (err, resultado) => {
+
+        if (err) {
+            console.error(err);
+
+            return res.status(500).json({
+                sucesso: false,
+                mensagem: "Erro no servidor"
+            });
+        }
+
+        if (resultado.length === 0) {
+            return res.json({
+                sucesso: false,
+                mensagem: "Nome, email ou senha incorretos"
+            });
+        }
+
+        const usuario = resultado[0];
+
+        res.json({
+            sucesso: true,
+            nome: usuario.nome
+        });
+    });
+
+});
+//==================================================
 
 app.post('/adicionar', function (req, res) {
     const values = [req.body.nome, req.body.email, req.body.senha];
 
-    const insert = 'INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)';
+    const insert = `
+        INSERT INTO usuarios (nome, email, senha) SELECT ?, ?, ? WHERE NOT EXISTS (
+        SELECT 1 FROM usuarios WHERE LOWER(email) = LOWER(?)
+        )
+    `;
 
-    connection.query(insert, values, function (err) {
+    connection.query(insert, [...values, req.body.email], function (err, resultado) {
         if (err) {
             console.error('Dados não inseridos:', err);
             return res.status(500).send('Erro ao cadastrar usuário');
         }
+        if (resultado.affectedRows === 0) {
+            return res.status(409).send('Este Gmail já está cadastrado.');
+        }
+
         console.log('Conta criada com sucesso!');
         res.redirect('/main.html');
     });
 });
 
-app.get('/listar', function (req, res) {
+/* app.get('/listar', function (req, res) {
     connection.query('SELECT * FROM usuarios', function (err, rows) {
         if (err) return res.status(500).send('Erro ao listar usuários');
 
@@ -104,6 +147,8 @@ name="nome"
     });
 });
 
+*/
+
 app.get('/deletar/:id', function (req, res) {
     connection.query('DELETE FROM usuarios WHERE id = ?', [req.params.id], function (err) {
         if (err) return res.status(500).send('Erro ao excluir usuário');
@@ -111,7 +156,7 @@ app.get('/deletar/:id', function (req, res) {
     });
 });
 
-app.get('/atualizar-form/:id', function (req, res) {
+/* app.get('/atualizar-form/:id', function (req, res) {
     connection.query('SELECT * FROM usuarios WHERE id = ?', [req.params.id], function (err, result) {
         if (err) return res.status(500).send('Erro ao obter dados do usuário');
         if (result.length === 0) return res.status(404).send('Usuário não encontrado');
@@ -191,13 +236,15 @@ app.get('/atualizar-form/:id', function (req, res) {
     });
 });
 
-app.post('/atualizar/:id', function (req, res) {
+*/
+
+/* app.post('/atualizar/:id', function (req, res) {
     const update = 'UPDATE usuarios SET nome = ?, email = ?, senha = ? WHERE id = ?';
     connection.query(update, [req.body.nome, req.body.email, req.body.senha, req.params.id], function (err) {
         if (err) return res.status(500).send('Erro ao atualizar usuário');
         res.redirect('/listar');
     });
-});
+}); */
 
 app.listen(8083, function () {
     console.log('Servidor rodando na url http://localhost:8083/index.html');

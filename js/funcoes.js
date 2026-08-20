@@ -41,6 +41,25 @@ onValue(sinalBarra, (snapshot) => {
 // ==============================
 
 const refTemp = ref(db, "tempSelecao");
+//img
+function atualizarImagemTemperatura(valor) {
+    const imagem = document.getElementById("imagemTemperatura");
+
+    if (!imagem) {
+        return;
+    }
+
+    const imagens = {
+        frio: "img/imgtemp1.png",
+        normal: "img/imgtemp2.png",
+        quente: "img/imgtemp3.png"
+    };
+
+    if (imagens[valor]) {
+        imagem.src = imagens[valor];
+    }
+}
+
 
 onValue(refTemp, (snapshot) => {
 
@@ -52,6 +71,13 @@ onValue(refTemp, (snapshot) => {
 
     const valor = dadosTemp.temp;
 
+    atualizarImagemTemperatura(valor);
+/*
+=========================
+erro em autera a função
+de temperatura
+=========================
+*/
     let i = 1;
     let limite;
 
@@ -81,14 +107,14 @@ onValue(refTemp, (snapshot) => {
             clearInterval(intervalo);
         }
 
-    }, 300);
+    }, 1000);
 
 });
-
-
+//===============================
 window.alterarTemp = async function(tempEscolhida) {
 
     localStorage.setItem("temperaturaEscolhida", tempEscolhida);
+    atualizarImagemTemperatura(tempEscolhida);
 
     await set(refTemp, {
         temp: tempEscolhida,
